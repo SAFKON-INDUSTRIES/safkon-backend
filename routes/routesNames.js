@@ -6,7 +6,7 @@ const getData = require('./routeController/getData')
 const loginData = require('./routeController/loginData')
 const signupData = require('./routeController/signupData')
 
-Router.get('/', getData)
+Router.get('/getinfo', checkUser, getData)
 Router.post('/saveinfo', saveData)
 Router.post('/login', loginData)
 Router.post('/signup', signupData)
